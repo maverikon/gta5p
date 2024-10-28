@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="cf461bb24745c2ceb2">
+
+    <title>Логи фракций</title>
+
+    <link rel="shortcut icon" href="/images/favicons/favicon.ico" type="image/x-icon"/>
+    <link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon-180x180.png"/>
+
+    <!-- Scripts -->
+    <script src="/js/app.js?1729782092" defer></script>
+    <script src="/js/common.js?1729782092"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfoerMUAAAAABPDYSl6xzyWRsPbevRLBbRYTWxa"></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+
+    <!-- Styles -->
+    <link href="/css/app.css?1729782092" rel="stylesheet">
+    <link href="/css/dark.css?1729782092" rel="stylesheet" media="(prefers-color-scheme: dark)">
+
+    <!-- Pages static -->
+    <link href="/css/adm/mi.css?56665867" rel="stylesheet"><link href="/css/adm/logs.css?56665867" rel="stylesheet"><script src="/js/pages/adm/logs.js?56665867"></script><script src="/js/pages/adm/global_admin.js?56665867"></script>
+
+    <script type="text/javascript">
+        var user = {
+    "url": "https:\/\/gta5rp.com",
+    "version": 1729782092,
+    "mid": 1557817,
+    "csrfToken": "cf461bb24745c2ceb2",
+    "sid": 1,
+    "uid": 1557817,
+    "name": "Evdapaha",
+    "searchSpider": false
+};
+        window.needNewNavBar = false;
+        window.redesignRoutes = [
+    "\/",
+    "\/login",
+    "\/restore",
+    "\/settings",
+    "\/stats",
+    "\/start",
+    "\/about",
+    "\/news",
+    "\/donate",
+    "\/register",
+    "\/shop",
+    "\/top",
+    "\/boombox"
+];
+    </script>
+</head>
+<body>
+    <!--<div class="topbar_item">
+    <div class="topbar_cont">
+        <div class="service_msg_row">
+            <div class="bold-text text-center">Внимание! Дизайн таким как сейчас не будет в итоге, сейчас нужно протестировать только функции ЛК. На проблемы с дизайном внимания обращать не стоит, <br>особенно на страницу статистики!<br><br>
+                <a href="" class="link_lock" id="settings_seen_pass_link" onclick="nav.go('/?act=hide_beta_notify&amp;hash=3ba74c2108f0765b3c')">Скрыть это сообщение</a>
+            </div>
+        </div>
+    </div>
+</div>-->
+<div id="box_layer_wrap" class="scroll_fix_wrap fixed" style="display: none;">
+    <div id="box_layer" style="width: 740px;">
+        <div id="box_loader" style="display: block; margin-top: 300px;">
+            <div class="pr pr_baw pr_medium" id="box_loader_pr">
+                <div class="pr_bt"></div>
+                <div class="pr_bt"></div>
+                <div class="pr_bt"></div>
+            </div>
+            <div class="back"></div>
+        </div>
+    </div>
+</div>
+<div id="app">
+    <div id="system_msg" style="background-color: rgb(255, 180, 163); display: none;"></div>
+    <div id="system_msg2" style="background-color: #D6E5F7;  display: none;"></div>
+    <nav class="navbar navbar-expand-md navbar-theme-color navbar-block">
+        <div class="container">
+            <a class="navbar-brand" href="https://gta5rp.com">.</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left Side Of Navbar -->
+                <ul class="navbar-nav mr-auto">
+                </ul>
+
+                <!-- Right Side Of Navbar -->
+                <ul class="navbar-nav ml-auto" id="right_nav_bar">
+                    <!-- Authentication Links -->
+    <li class="nav-item dropdown">
+        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false" v-pre>
+            Evdapaha <span class="caret"></span>
+        </a>
+
+
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" id="navbar_main_menu"><a href="/stats" class="nav-go dropdown-item"><i class="fa fa-btn fa-home"></i>Мой аккаунт</a><a href="/admins" class="nav-go dropdown-item">Админы</a><a href="/admins?act=online" class="nav-go dropdown-item">Админы: онлайн</a><a href="/logs?act=family" class="nav-go dropdown-item">Лог семьи</a><a href="/logs?act=faction" class="nav-go dropdown-item">Лог фракций</a><a href="/logs?act=auth" class="nav-go dropdown-item">Лог авторизаций</a><a href="/logs?act=house_inv" class="nav-go dropdown-item">Лог инвентаря дома</a><a href="/logs?act=flat_inv" class="nav-go dropdown-item">Лог инвентаря квартиры</a><a href="/logs?act=vehicle_inv" class="nav-go dropdown-item">Лог инвентаря тачки</a><a href="/logs?act=global_inv" class="nav-go dropdown-item">Лог универсального инвентаря</a><a href="/logs?act=trade" class="nav-go dropdown-item">Лог передачи предметов</a><a href="" class="dropdown-item link_lock" onclick="showLangBox();"><i class="fa fa-btn fa-settings"></i>Сменить язык</a><a href="/report_moder?tab=new" class="nav-go dropdown-item">Обращения</a><a href="/report_moder?act=search" class="nav-go dropdown-item">Обращения: Поиск</a><a href="/settings" class="nav-go dropdown-item"><i class="fa fa-btn fa-settings"></i>Настройки</a><a href="/user/boombox" class="nav-go dropdown-item">Бумбокс</a><a href="/logout?hash=6b53934809c55e6432" class="nav-go dropdown-item">Выход</a></div>
+    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-4" id="page_content_body">
+            <div class="container">
+        <div id="faction_logs_alert_block"></div>
+        <div class="card">
+            <div class="card-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="faction_logs_server_id"
+                                       class="col-sm-4 col-form-label bold-text">Сервер:</label>
+                                <div class="col-sm-6">
+                                    <select id="faction_logs_server_id" class="form-control selectpicker" data-live-search="false" >
+    <option value="09" selected>Eclipse</option>
+</select>
+                                </div>
+                                <span class="invalid-feedback d-block" role="alert" id="faction_logs_server_id_alert">
+                                    <strong></strong>
+                                </span>
+                            </div>
+                            <div class="form-group row">
+                                <label for="faction_logs_char"
+                                       class="col-sm-4 col-form-label bold-text">Ник/Ид перса:</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="faction_logs_char"
+                                           placeholder="username/357" value="">
+                                </div>
+                                <span class="invalid-feedback d-block" role="alert" id="faction_logs_char_alert">
+                                    <strong></strong>
+                                </span>
+                            </div>
+                            <div class="form-group row">
+                                <label for="faction_logs_faction"
+                                       class="col-sm-4 col-form-label bold-text">Фракция:</label>
+                                <div class="col-sm-6">
+                                    <select id="faction_logs_faction" class="form-control selectpicker" data-live-search="false" >
+    <option value="">(нет)</option><option value="F_ARMENIAMAFIA">Армянская Мафия</option><option value="F_EMS">Medical Services</option><option value="F_FIB">FIB</option><option value="F_GANG_BALLAS">The Ballas Gang</option><option value="F_GANG_BLOODS">Bloods</option><option value="F_GANG_GROVE">The Families</option><option value="F_GANG_MARABUNTA">Marabunta Grande</option><option value="F_GANG_VAGOS">Los Santos Vagos</option><option value="F_ITALYMAFIA">Итальянская Мафия</option><option value="F_LSARMY">LS Army</option><option value="F_LSCITYHALL">Мэрия ЛС</option><option value="F_LSPD">LSPD</option><option value="F_LSSD">LSSD</option><option value="F_MEXICOMAFIA">Мексиканская Мафия</option><option value="F_NEWS">Weazel News</option><option value="F_PRISON" selected>Федеральная Тюрьма</option><option value="F_RUSSIANMAFIA">Русская Мафия</option><option value="F_YAKUZA">Японская Мафия</option>
+</select>
+                                </div>
+                                <span class="invalid-feedback d-block" role="alert" id="faction_logs_faction_alert">
+                                    <strong></strong>
+                                </span>
+                            </div>
+                            <div class="form-group row">
+                                <label for="faction_logs_time_from"
+                                       class="col-md-4 col-form-label bold-text">Дата (От):</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="faction_logs_time_from"
+                                           placeholder="31/12/1999"
+                                           value="23.10.2024">
+                                </div>
+                                <span class="invalid-feedback d-block" role="alert" id="faction_logs_time_from_alert">
+                                    <strong></strong>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label for="faction_logs_text"
+                                       class="col-md-4 col-form-label bold-text">Действие:</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="faction_logs_text"
+                                           placeholder="warehouse" value="срок">
+                                </div>
+                                <span class="invalid-feedback d-block" role="alert" id="faction_logs_text_alert">
+                                    <strong></strong>
+                                </span>
+                            </div>
+                            <div class="form-group row">
+                                <label for="faction_logs_time_to"
+                                       class="col-md-4 col-form-label bold-text">Дата (До):</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="faction_logs_time_to"
+                                           placeholder="01/01/2000"
+                                           value="">
+                                </div>
+                                <span class="invalid-feedback d-block" role="alert" id="faction_logs_time_to_alert">
+                                    <strong></strong>
+                                </span>
+                            </div>
+                            <div class="form-group row text-center">
+                                <div class="col-sm-10">
+                                    <button class="btn btn-primary" type="button" onclick="Logs.factionSearch(this, $('#faction_logs_faction').val(), val('faction_logs_char'),
+ $('#faction_logs_server_id').val(), val('faction_logs_text'), val('faction_logs_time_from'), val('faction_logs_time_to'), 1)" id="logs_f1541c3cc5a5">Поиск</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>&nbsp;</p>
+                <div class="text-center" id="paginate_block">
+                    
+                </div>
+                <div class="text-center">Найдено <b id="logs_total_cnt">0</b> строк.
+                    Отображено <b id="logs_cnt">0</b>, макс. <b>3000</b>. <a class="link_lock " onclick='Logs.editRowCountBox(this,"faction");' href="" id="logs_f624451d5ece">(изменить)</a> </div>
+            </div>
+        </div>
+    </div>
+    <p>&nbsp;</p>
+    <div class="container">
+        <div class="card">
+            <table class="table table-bordered table-striped table-hover table-responsive-lg">
+                <thead>
+                <tr>
+                    <th>
+                        Ид                    </th>
+                    <th>
+                        Персонаж                    </th>
+                    <th>
+                        Фракция                    </th>
+                    <th>
+                        Текст                    </th>
+                    <th>
+                        Время                    </th>
+                </tr>
+                </thead>
+                <tbody id="logs_table">
+                <tr>
+        <td colspan="5">
+            <div class="text-center">Ничего не найдено</div>
+        </td>
+    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </main>
+    <script type="text/javascript">
+        domReady(function () {
+            stFiles.init({
+    "adm\/mi.css": 56665867,
+    "adm\/logs.css": 56665867,
+    "adm\/logs.js": 56665867,
+    "adm\/global_admin.js": 56665867
+});
+            cur.search_faction_logs = "07a3d2acc33536c7e6";
+ajax.refreshNav();
+new WOW.WOW().init();
+$('#faction_logs_server_id').selectpicker();
+$('#faction_logs_faction').selectpicker();
+Logs.initDatePicker('faction_logs_time_from');
+Logs.initDatePicker('faction_logs_time_to');
+addDynamicStrings({"global_confirm_box_title":"Подтверждение действия","global_yes":"Да","global_no":"Нет","global_captcha_box":"Проверка на робота. Подождите..."});
+ajax.setPageParams({"title":"Логи фракций","loc":"\/logs?act=faction","module":"logs","noLoc":false});
+
+        });
+    </script>
+</div>
+<!-- Modal -->
+<div class="modal" id="confirm_modal" tabindex="-1" role="dialog" aria-labelledby="confirm_modalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirm_box_title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body"><span id="confirm_modal_text"></span></div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="button" onclick="ajax.confirmAction()" id="activation_a91473b10a0f">Да</button>
+                <button class="btn btn-default" type="button" data-dismiss="modal" onclick="">Нет</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal" tabindex="-1" role="dialog" aria-labelledby="recaptcha_modalLabel" id="recaptcha_modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="recaptcha_box_title">Проверка на робота</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="recaptcha_v2"></div>
+            <div class="modal-footer"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+    <!-- Page rendered at 0.21404004096985 sec -->
+
